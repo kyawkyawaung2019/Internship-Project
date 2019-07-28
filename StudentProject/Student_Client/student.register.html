@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Student Registration</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<!-- jquery -->
+	<script type="text/javascript" src="jquery.js"></script>
+	
+	<!-- bootstrap -->
+	<script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+	
+	<!-- created -->
+	<script type="text/javascript" src="js/student.register.js"></script>
+	<link rel="stylesheet" href="css/student.register.css">
+</head>
+
+<body>
+	<!-- This is body area -->
+	<div class="container">
+		<!-- This is header area -->
+		<div class="row header" id="header">
+			<div class="col-md-2">
+				<a href="http://localhost:8000/" target="_blank">
+					<img src="images/uni_logo.jpg" class="img-rounded" alt="University Logo" width="100" height="100" class="uni_logo" id="uni_logo">
+				</a>
+			</div>
+			<div class="col-md-7">
+				<h1 style="text-shadow: 7px 20px 5px white;">University of Computer Studies, MAUBIN</h1>
+			</div>
+			<div class="col-md-3">
+				<audio controls loop>
+					<source src="media/music/home.mp3" type="audio/mp3">
+					Your browser does not support the audio element.
+				</audio>
+			</div>
+		</div>
+
+		<!-- This is body header area -->
+		<div class="row">
+			<div class="col-md-11">
+				<h1>Student Registration!</h1>
+			</div>
+			<div class="col-md-1">
+				<button type="button" class="btn btn-primary" onclick="BackHome();">Back</button>
+			</div>
+		</div>
+
+		<!-- This is body content area -->
+		<div class="row">
+			<div class="col-md-12 content">
+				<form role="form">
+					<table class="table">
+						<tr>
+							<th><label>Student Name</label></th>
+							<td><input type="text" class="form-control" id="reStudentName"></td>
+						</tr>
+						<tr>
+							<th><label>Age</label></th>
+							<td><input type="number" min="0" max="120" class="form-control" id="reAge"></td>
+						</tr>
+						<tr>
+							<th><label>Gender</label></th>
+							<td>
+								<input type="radio" name="gender" value="Male" checked>Male
+								<input type="radio" name="gender" value="Female">Female
+								<input type="radio" name="gender" value="Other">Other
+							</td>
+						</tr>
+						<tr>
+							<th><label>Address</label></th>
+							<td><input type="text" class="form-control" id="reAddress"></td>
+						</tr>
+						<tr>
+							<th><label>Course</label></th>
+							<td><select id="selCourseName" class="form-control"></select></td>
+						</tr>
+						<tr>
+							<th></th>
+							<td align="right"><button type="button" class="btn btn-success" onclick="CreateStudent();">Save</button>
+								<button type="button" class="btn btn-danger" onclick="BackHome();">Cancel</button>
+							</td>
+						</tr>
+					</table>
+				</form>
+			</div>
+		</div>
+
+		<!-- This is footer area -->
+		<div class="row footer" id="footer">
+			<div class="col-md-12">
+				<h5>Copyright &copy; University of Computer Studies, MAUBIN</h5>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>UCSMb</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<!-- jquery -->
+	<script type="text/javascript" src="jquery.js"></script>
+	
+	<!-- bootstrap -->
+	<script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+	
+	<!-- created -->
+	<script type="text/javascript" src="js/index.js"></script>
+	<link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+	<!-- This is body area -->
+	<div class="container-fluid">
+		<!-- This is header area -->
+		<div class="row header" id="header">
+			<div class="col-md-2">
+				<a href="http://localhost:8000/" target="_blank">
+					<img src="images/uni_logo.jpg" class="img-rounded" alt="University Logo" width="100" height="100" class="uni_logo" id="uni_logo">
+				</a>
+			</div>
+			<div class="col-md-7">
+				<h1 style="text-shadow: 7px 20px 5px white;">University of Computer Studies, MAUBIN</h1>
+			</div>
+			<div class="col-md-3">
+				<audio controls loop autoplay>
+					<source src="media/music/home.mp3" type="audio/mp3">
+					Your browser does not support the audio element.
+				</audio>
+			</div>
+		</div>
+
+		<!-- This is body area -->
+		<div class="row body" id="body">
+			<!-- This is menu area. -->
+			<div class="col-md-2 menu" id="menu">
+				<ul class="menu-bar">
+					<li onclick="ShowHome();" class="btn btn-success">Home</li>
+					<li onclick="ShowStudent();" class="btn btn-success" id="showStudent">Student</li>
+					<li onclick="ShowCourse();" class="btn btn-success" id="showCourse">Course</li>
+					<li onclick="ShowMusic();" class="btn btn-success">Music</li>
+					<li onclick="ShowVideo();" class="btn btn-success">Video</li>
+					<li onclick="ShowAbout();" class="btn btn-success">About</li>
+				</ul>
+			</div>
+
+			<!-- This is Home  -->
+			<div class="col-md-10 content" id="home">
+				<img src="images/home.jpg" width="100%">
+			</div>
+
+			<!-- This is Student Information -->
+			<div class="col-md-10 content" id="student">
+				<div class="row">
+					<div class="col-md-10">
+						<h1>Student Information</h1>
+					</div>
+					<div class="col-md-2">
+						<button type="button" class="btn btn-warning btn-md" onclick="StudentRegister();">Register</button>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-12">
+						<table class="table table-striped" id="studentTable">
+							<thead>
+								<tr>
+									<th>Student ID</th>
+									<th>Student Name</th>
+									<th>Age</th>
+									<th>Gender</th>
+									<th>Address</th>
+									<th>Course</th>
+									<th></th>
+									<th></th>
+								</tr>
+							</thead>
+							<tbody id="studentTableBody">
+								<thread>
+									<!-- Here is the student information that retrieves form student table -->
+								</thread>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+
+			<!-- This is Course Information -->
+			<div class="col-md-10 content" id="course">
+				<div class="row">
+					<div class="col-md-10">
+						<h1>Course Information</h1>
+					</div>
+					<div class="col-md-2">
+						<button type="button" class="btn btn-warning btn-md" onclick="CourseRegister();">Register</button>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-12">
+						<table class="table table-striped" id="courseTable">
+					<thead>
+						<tr>
+							<th>Course ID</th>
+							<th>Course Name</th>
+							<th>Major</th>
+							<th></th>
+						</tr>
+					</thead>
+					<tbody id="courseTableBody">
+						<thread>
+							<!-- Here is the course information that retrieves from course table -->
+						</thread>
+					</tbody>
+				</table>
+					</div>
+				</div>
+			</div>
+
+			<!-- This is Media Music Information -->
+			<div class="col-md-10 content" id="mediaMusic">
+				<div class="row">
+					<div class="col-md-12">
+						<h1>Songs</h1>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-12">
+						<table class="table table-striped" id="music">
+							<thead>
+								<tr>
+									<th>Title</th>
+									<th>Musician</th>
+									<th>Play</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>Aphyu Yaung Tha Chin</td>
+									<td>Htun Eaindra Bo</td>
+									<td>
+										<audio controls>
+											<source src="media/music/friend.mp3" type="audio/mp3">
+											Your browser does not support the audio element.
+										</audio>
+									</td>
+								</tr>
+								<tr>
+									<td>Moe</td>
+									<td>Ye Lay</td>
+									<td>
+										<audio controls>
+											<source src="media/music/Moe.mp3" type="audio/mp3">
+											Your browser does not support the audio element.
+										</audio>
+									</td>
+								</tr>
+								<tr>
+									<td>Kyaung Tha Chin</td>
+									<td>NG2K</td>
+									<td>
+										<audio controls>
+											<source src="media/music/home.mp3" type="audio/mp3">
+											Your browser does not support the audio element.
+										</audio>
+									</td>
+								</tr>
+								<tr>
+									<td>Lat Khan Pay Par</td>
+									<td>Myo Gyi</td>
+									<td>
+										<audio controls>
+											<source src="media/music/LatKhanPayPar.mp3" type="audio/mp3">
+											Your browser does not support the audio element.
+										</audio>
+									</td>
+								</tr>
+								<tr>
+									<td>Moe</td>
+									<td>Myo Gyi</td>
+									<td>
+										<audio controls>
+											<source src="media/music/03.mp3" type="audio/mp3">
+											Your browser does not support the audio element.
+										</audio>
+									</td>
+								</tr>
+								<tr>
+									<td>A Chit A Twat Kan Ma Kaung Kae' Thu </td>
+									<td>L Si Zi</td>
+									<td>
+										<audio controls>
+											<source src="media/music/02.mp3" type="audio/mp3">
+											Your browser does not support the audio element.
+										</audio>
+									</td>
+								</tr>
+								<tr>
+									<td>Moe Yar Thi</td>
+									<td>L Si Zi</td>
+									<td>
+										<audio controls>
+											<source src="media/music/01.mp3" type="audio/mp3">
+											Your browser does not support the audio element.
+										</audio>
+									</td>
+								</tr>
+								<tr>
+									<td>Moe Sat Pwint Lay</td>
+									<td>Sai Sai</td>
+									<td>
+										<audio controls>
+											<source src="media/music/04.mp3" type="audio/mp3">
+											Your browser does not support the audio element.
+										</audio>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+
+			<!-- This is Media Video Information -->
+			<div class="col-md-10 content" id="mediaVideo">
+				<div class="row">
+					<div class="col-md-9">
+						<video controls>
+								<source src="media/video/Eain.mp4" type="video/mp4">
+								Your browser does not support for this video.
+						</video>
+					</div>
+					<div class="col-md-3">
+						<video controls>
+							<source src="media/video/ClockSong.mp4" type="video/mp4">
+							Your browser does not support the video tag.
+						</video>
+						<video controls>
+							<source src="media/video/WailLa.mp4" type="video/mp4">
+							Your browser does not support the video tag.
+						</video>
+						<video controls>
+							<source src="media/video/MyHome.mp4" type="video/mp4">
+							Your browser does not support for this video.
+						</video>
+						<video controls>
+							<source src="media/video/home.mp4" type="video/mp4">
+							Your browser does not support for this video.
+						</video>
+					</div>
+				</div>
+			</div>
+
+			<!-- This is About Information -->
+			<div class="col-md-10 content" id="about">
+				<img src="images/about.jpg" width="100%">
+			</div>
+		</div>
+
+		<!-- This is footer area -->
+		<div class="row footer" id="footer">
+			<div class="col-md-12">
+				<h5>Copyright &copy; University of Computer Studies, MAUBIN</h5>
+			</div>
+		</div>
+	</div>
+	
+	<!-- This is Modal area -->
+	<div class="container">
+		<!-- Student Update Modal -->
+		<div class="modal fade" id="studentUpdateModal" role="dialog">
+			<div class="modal-dialog">
+				<!-- Modal content-->
+				<div class="modal-content">
+					<div class="modal-header">
+						<h4 class="modal-title">Student Update!</h4>
+						<button type="button" class="close" onclick="ClearStudentUpdateModal();">&times;</button>
+					</div>
+					<div class="modal-body">
+						<form role="form">
+							<table class="table">
+								<tr id="student_id_row">
+									<th><label>Student ID</label></th>
+									<td><input type="number" class="form-control" id="u_student_id" readonly></td>
+								</tr>
+								<tr>
+									<th><label>Student Name</label></th>
+									<td><input type="text" class="form-control" id="u_student_name"></td>
+								</tr>
+								<tr>
+									<th><label>Age</label></th>
+									<td><input type="number" min="0" max="120" class="form-control" id="u_age"></td>
+								</tr>
+								<tr>
+									<th><label>Gender</label></th>
+									<td>
+										<input type="radio" name="gender" value="Male">Male
+										<input type="radio" name="gender" value="Female">Female
+										<input type="radio" name="gender" value="Other">Other
+									</td>
+								</tr>
+								<tr>
+									<th><label>Address</label></th>
+									<td><input type="text" class="form-control" id="u_address"></td>
+								</tr>
+								<tr>
+									<th><label>Course</label></th>
+									<td><select id="selCourseName" class="form-control" name="selCourseName"></select></td>
+								</tr>
+							</table>
+						</form>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-success btn-md" onclick="UpdateStudent();">Update</button>
+						<button type="button" class="btn btn-danger btn-md" onclick="DeleteStudent();">Delete</button>
+						<button type="button" class="btn btn-warning btn-md" onclick="ClearStudentUpdateModal();">Cancle</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Course Update Modal -->
+		<div class="modal fade" id="courseUpdateModal" role="dialog">
+			<div class="modal-dialog">
+				<!-- Modal content-->
+				<div class="modal-content">
+					<div class="modal-header">
+						<h4 class="modal-title">Course Update!</h4>
+						<button type="button" class="close" onclick="ClearCourseUpdateModal();">&times;</button>
+					</div>
+					<div class="modal-body">
+						<form role="form">
+							<table class="table">
+								<tr id="course_id_row">
+									<th><label>Course ID</label></th>
+									<td><input type="number" class="form-control" id="u_course_id" readonly></td>
+								</tr>
+								<tr>
+									<th><label>Course Name</label></th>
+									<td><input type="text" class="form-control" id="u_course_name"></td>
+								</tr>
+								<tr>
+									<th><label>Major</label></th>
+									<td><input type="text" class="form-control" id="u_major"></td>
+								</tr>
+							</table>
+						</form>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-success btn-md" onclick="UpdateCourse();">Update</button>
+						<button type="button" class="btn btn-danger btn-md" onclick="DeleteCourse();">Delete</button>
+						<button type="button" class="btn btn-warning btn-md" onclick="ClearCourseUpdateModal();">Cancle</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
